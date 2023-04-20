@@ -342,6 +342,59 @@ section#section-2 .wrapper .container .block:hover {
   cursor: pointer;
   box-shadow: 0px 6px 24px rgba(66, 98, 146, 0.35);
 }
+section#section-3 .wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+section#section-3 .wrapper .background {
+  display: flex;
+  align-items: center;
+  background-image: url("/images/background-3.png");
+  background-size: auto 90%;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+section#section-3 .wrapper .background .block-text {
+  position: absolute;
+  right: 0;
+  max-width: 45%;
+  right: 0%;
+  background: #000000;
+  color: #FFFFFF;
+  border-radius: 16px;
+  padding: 50px;
+}
+section#section-3 .wrapper .background .block-text .block-text-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 49px;
+  margin: 0;
+  padding-bottom: 10px;
+}
+section#section-3 .wrapper .background .block-text p {
+  margin: 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  padding-bottom: 10px;
+}
+section#section-3 .wrapper .background .block-text a {
+  font-weight: 600;
+  color: #000000;
+  background: #FFFFFF;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  display: flex;
+  width: -moz-max-content;
+  width: max-content;
+}
 
 @media (max-width: 950px) {
   header .navigation {
@@ -556,7 +609,8 @@ section#section-2 .wrapper .container .block:hover {
   section#section-2 {
     height: auto !important;
   }
-  section#section-2 .wrapper .title, section#section-2 .wrapper h4 {
+  section#section-2 .wrapper .title,
+  section#section-2 .wrapper h4 {
     font-size: 26px;
     padding: 20px 0;
   }
@@ -571,7 +625,8 @@ section#section-2 .wrapper .container .block:hover {
   section#section-2 {
     height: auto;
   }
-  section#section-2 .wrapper .title, section#section-2 .wrapper h4 {
+  section#section-2 .wrapper .title,
+  section#section-2 .wrapper h4 {
     font-size: 36px;
     padding: 20px 0;
   }
