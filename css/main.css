@@ -714,6 +714,15 @@ section#section-3 .wrapper .background .block-text a {
     font-size: 14px;
   }
 }
+@media (max-width: 400px) and (max-height: 950px) {
+  section#section-3 .wrapper .background .block-text {
+    bottom: 12%;
+  }
+  section#section-3 .wrapper .background .block-text p {
+    font-size: 17px;
+    line-height: 27px;
+  }
+}
 @media (max-width: 400px) and (max-height: 870px) {
   section#section-3 .wrapper .background .block-text {
     bottom: 12%;
