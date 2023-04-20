@@ -284,6 +284,67 @@ section {
         background-image: url('/images/screen-1/background-1-m.png');
         background-size: 100% 100%;
 
+        .wrapper {
+            padding: 0 80px;
+            width: 55%;
+            max-width: 55%;
+            max-width: 750px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .title {
+                font-weight: 400;
+                font-size: 72px;
+                line-height: 98px;
+                color: #FFFFFF;
+                margin: 0;
+                padding-bottom: 8px;
+            }
+
+            .description {
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 33px;
+                color: #FFFFFF;
+                margin: 0;
+                padding-bottom: 8px;
+                text-align: justify;
+            }
+
+            .custom-search {
+                position: relative;
+                width: 100%;
+
+                .custom-search-input {
+                    width: 100%;
+                    border: 1px solid #ccc;
+                    border-radius: 8px;
+                    padding: 12px 100px 12px 12px;
+                    line-height: 1;
+                    box-sizing: border-box;
+                    outline: none;
+                }
+
+                .custom-search-botton {
+                    position: absolute;
+                    right: 3px;
+                    top: 3px;
+                    bottom: 3px;
+                    border: 0;
+                    background: #000000;
+                    border-radius: 8px;
+                    color: #FFFFFF;
+                    outline: none;
+                    margin: 0;
+                    padding: 10px 12px;
+                    border-radius: 8px;
+                    z-index: 2;
+                    cursor: pointer;
+                }
+            }
+        }
+
     }
 }
 
@@ -449,3 +510,85 @@ section {
 }
 
 // end media for header
+
+
+
+// media for screen 1
+@media (max-width: 1280px) {
+    section {
+        &#section-1 {
+            .wrapper {
+                width: 55%;
+
+                .title {
+                    font-size: 60px;
+                    line-height: 60px;
+                }
+
+                .description {
+                    text-align: initial;
+                }
+
+            }
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    section {
+        &#section-1 {
+            background-image: url('/images/screen-1/background-1-mobile.png');
+            background-position: right;
+            background-size: cover;
+
+            .wrapper {
+                width: 60%;
+
+                .title {
+                    font-size: 55px;
+                    line-height: 55px;
+                    padding-bottom: 25px;
+                }
+
+                .description {
+                    text-align: initial;
+                }
+
+            }
+        }
+    }
+}
+
+@media (max-width: 950px) {
+    section {
+        &#section-1 {
+            .wrapper {
+                .title {
+                    font-size: 39px;
+                    line-height: 53px;
+                }
+
+                .description {
+                    font-size: 18px;
+                    line-height: 25px;
+                    padding-bottom: 24px;
+                }
+
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    section {
+        &#section-1 {
+            .wrapper {
+                width: 100%;
+                max-width: 100%;
+                padding: 0 20px;
+            }
+        }
+    }
+}
+
+// end for screen 1
