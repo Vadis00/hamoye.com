@@ -774,7 +774,7 @@ section {
     }
 }
 
-@media (max-width: 370px) {
+@media (max-width: 390px) {
     section {
         &#section-2 {
             height: auto !important;
@@ -800,7 +800,7 @@ section {
     }
 }
 
-@media only screen and (max-width: 800px) and (orientation: landscape) {
+@media only screen and (max-width: 900px) and (orientation: landscape) {
     section {
         &#section-2 {
             height: auto;
@@ -826,3 +826,311 @@ section {
 }
 
 // end for screen 2
+
+// media for screen 3
+@media (max-width: 1100px) {
+    section {
+        &#section-3 {
+
+            .wrapper {
+                .background {
+                    background-size: auto 80%;
+
+                    .block-text {
+                        right: -5%;
+                        max-width: 50%;
+
+                        .block-text-title {
+                            font-size: 31px;
+                            line-height: 40px;
+                        }
+
+                        p {
+                            font-size: 16px;
+                        }
+
+                        a {}
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 950px) {
+    section {
+        &#section-3 {
+
+            .wrapper {
+
+                padding: 40px;
+
+                .background {
+                    background-position-y: top;
+                    background-size: contain;
+
+                    .block-text {
+                        left: 0%;
+                        right: 0%;
+                        bottom: 0;
+                        max-width: 80%;
+                        margin: auto;
+
+                        .block-text-title {
+                            font-size: 31px;
+                            line-height: 40px;
+                        }
+
+                        p {
+                            font-size: 16px;
+                        }
+
+                        a {}
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    section {
+        &#section-3 {
+
+            .wrapper {
+                .background {
+                    .block-text {
+                        max-width: 70%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 950px) {
+    section {
+        &#section-3 {
+
+            .wrapper {
+                padding: 40px 0;
+
+                .background {
+                    .block-text {
+                        padding: 16px;
+                        max-width: 80%;
+                        bottom: 8%;
+
+                        .block-text-title {
+                            font-size: 24px;
+                        }
+
+                        a {}
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    section {
+        &#section-3 {
+
+            .wrapper {
+                padding: 40px 0;
+
+                .background {
+                    background-image: url('/images/background-3-mobile.png');
+
+                    .block-text {
+
+                        .block-text-title {}
+
+                        a {}
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    section {
+        &#section-3 {
+
+            .wrapper {
+                .background {
+                    .block-text {
+                        bottom: 5%;
+
+                        .block-text-title {
+                            font-size: 19px;
+                            line-height: 30px;
+                        }
+
+                        p {
+                            line-height: 20px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) and (max-height: 870px) {
+    section {
+        &#section-3 {
+
+            .wrapper {
+                .background {
+                    .block-text {
+                        bottom: 12%;
+
+                        .block-text-title {}
+
+                        p {
+                            line-height: 22px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) and (max-height: 800px) {
+    section {
+        &#section-3 {
+
+            .wrapper {
+                .background {
+                    .block-text {
+                        bottom: 7%;
+
+                        .block-text-title {}
+
+                        p {
+                            line-height: 22px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) and (max-height: 725px) {
+    section {
+        &#section-3 {
+
+            .wrapper {
+                .background {
+                    .block-text {
+                        bottom: 2%;
+
+                        .block-text-title {}
+
+                        p {
+                            line-height: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) and (max-height: 690px) {
+    section {
+        &#section-3 {
+
+            .wrapper {
+                .background {
+                    .block-text {
+                        bottom: 0%;
+
+                        .block-text-title {}
+
+                        p {
+                            line-height: 19px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 900px) and (orientation: landscape) {
+    section {
+        &#section-3 {
+
+            .wrapper {
+                padding: 40px;
+
+                .background {
+                    .block-text {
+                        max-width: 50%;
+                        right: 5%;
+                        left: auto;
+                        top: 0;
+                        bottom: 0;
+                        margin: 10px;
+
+                        .block-text-title {
+                            font-size: 18px;
+                            padding-bottom: 5px;
+                        }
+
+                        p {
+                            line-height: 17px;
+                            font-size: 12px;
+                        }
+
+                        a {
+                            font-size: 14px;
+                            padding: 8px 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) and (orientation: landscape) {
+    section {
+        &#section-3 {
+
+            .wrapper {
+                padding: 20px;
+
+                .background {
+                    .block-text {
+                        max-width: 55%;
+                        right: 0%;
+
+                        .block-text-title {
+
+                        }
+
+                        p {
+
+                        }
+
+                        a {
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// end for screen 3
