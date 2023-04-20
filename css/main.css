@@ -25,6 +25,24 @@ li {
           user-select: none;
 }
 
+.title {
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 98px;
+  color: #FFFFFF;
+  margin: 0;
+  padding-bottom: 8px;
+}
+
+h4 {
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 87px;
+  color: #000000;
+  text-align: center;
+  margin: 0;
+}
+
 header {
   position: absolute;
   top: 0;
@@ -236,26 +254,20 @@ section {
   height: 100vh;
   display: flex;
 }
+section .wrapper {
+  padding: 0 80px;
+}
 section#section-1 {
   background-image: url("/images/screen-1/background-1-m.png");
   background-size: 100% 100%;
 }
 section#section-1 .wrapper {
-  padding: 0 80px;
   width: 55%;
   max-width: 55%;
   max-width: 750px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-section#section-1 .wrapper .title {
-  font-weight: 400;
-  font-size: 72px;
-  line-height: 98px;
-  color: #FFFFFF;
-  margin: 0;
-  padding-bottom: 8px;
 }
 section#section-1 .wrapper .description {
   font-weight: 500;
@@ -294,6 +306,41 @@ section#section-1 .wrapper .custom-search .custom-search-botton {
   border-radius: 8px;
   z-index: 2;
   cursor: pointer;
+}
+section#section-2 .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  background: linear-gradient(360deg, #F9F9F9 0%, rgba(255, 255, 255, 0) 100%);
+}
+section#section-2 .wrapper .title {
+  color: #000000;
+  padding: 0;
+}
+section#section-2 .wrapper .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+section#section-2 .wrapper .container .block {
+  width: calc(50% - 40px);
+  box-sizing: border-box;
+  background: #F9F9F9;
+  box-shadow: 0px 6px 24px rgba(66, 98, 146, 0.15);
+  border-radius: 16px;
+  padding: 16px;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  color: #02323D;
+  transition: all 0.5s;
+}
+section#section-2 .wrapper .container .block:hover {
+  cursor: pointer;
+  box-shadow: 0px 6px 24px rgba(66, 98, 146, 0.35);
 }
 
 @media (max-width: 950px) {
@@ -419,13 +466,48 @@ section#section-1 .wrapper .custom-search .custom-search-botton {
   transform: rotateX(180deg);
 }
 
+@media (max-width: 950px) {
+  section .wrapper {
+    padding: 0 40px;
+  }
+  section .wrapper .title {
+    font-size: 39px;
+    line-height: 53px;
+  }
+  section .wrapper h4 {
+    font-size: 33px;
+    line-height: 35px;
+  }
+}
+@media (max-width: 600px) {
+  section .wrapper {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 1100px) {
+  .title {
+    font-size: 55px;
+    line-height: 55px;
+    padding-bottom: 25px;
+  }
+  h4 {
+    font-size: 50px;
+    line-height: 50px;
+  }
+}
+@media (max-width: 1280px) {
+  .title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+  h4 {
+    font-size: 55px;
+    line-height: 55px;
+  }
+}
 @media (max-width: 1280px) {
   section#section-1 .wrapper {
     width: 55%;
-  }
-  section#section-1 .wrapper .title {
-    font-size: 60px;
-    line-height: 60px;
   }
   section#section-1 .wrapper .description {
     text-align: initial;
@@ -441,8 +523,6 @@ section#section-1 .wrapper .custom-search .custom-search-botton {
     width: 60%;
   }
   section#section-1 .wrapper .title {
-    font-size: 55px;
-    line-height: 55px;
     padding-bottom: 25px;
   }
   section#section-1 .wrapper .description {
@@ -450,10 +530,6 @@ section#section-1 .wrapper .custom-search .custom-search-botton {
   }
 }
 @media (max-width: 950px) {
-  section#section-1 .wrapper .title {
-    font-size: 39px;
-    line-height: 53px;
-  }
   section#section-1 .wrapper .description {
     font-size: 18px;
     line-height: 25px;
@@ -464,6 +540,44 @@ section#section-1 .wrapper .custom-search .custom-search-botton {
   section#section-1 .wrapper {
     width: 100%;
     max-width: 100%;
-    padding: 0 20px;
+  }
+}
+@media (max-width: 600px) {
+  section#section-2 .wrapper .title {
+    font-size: 36px;
+  }
+  section#section-2 .wrapper .container .block {
+    margin: 10px 0;
+    font-size: 15px;
+    width: 100%;
+  }
+}
+@media (max-width: 370px) {
+  section#section-2 {
+    height: auto !important;
+  }
+  section#section-2 .wrapper .title, section#section-2 .wrapper h4 {
+    font-size: 26px;
+    padding: 20px 0;
+  }
+  section#section-2 .wrapper .container .block {
+    font-size: 14px;
+    margin: 10px 0;
+    margin: 15px 0;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 800px) and (orientation: landscape) {
+  section#section-2 {
+    height: auto;
+  }
+  section#section-2 .wrapper .title, section#section-2 .wrapper h4 {
+    font-size: 36px;
+    padding: 20px 0;
+  }
+  section#section-2 .wrapper .container .block {
+    margin: 10px 0;
+    font-size: 15px;
+    width: 100%;
   }
 }/*# sourceMappingURL=main.css.map */
