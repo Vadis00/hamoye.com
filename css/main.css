@@ -262,12 +262,15 @@ section#section-1 {
   background-size: 100% 100%;
 }
 section#section-1 .wrapper {
-  width: 55%;
-  max-width: 55%;
+  width: -moz-min-content;
+  width: min-content;
   max-width: 750px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+section#section-1 .wrapper .title {
+  white-space: nowrap;
 }
 section#section-1 .wrapper .description {
   font-weight: 500;
@@ -561,6 +564,8 @@ section#section-3 .wrapper .background .block-text a {
 @media (max-width: 1280px) {
   section#section-1 .wrapper {
     width: 55%;
+    width: -moz-min-content;
+    width: min-content;
   }
   section#section-1 .wrapper .description {
     text-align: initial;
@@ -574,6 +579,8 @@ section#section-3 .wrapper .background .block-text a {
   }
   section#section-1 .wrapper {
     width: 60%;
+    width: -moz-min-content;
+    width: min-content;
   }
   section#section-1 .wrapper .title {
     padding-bottom: 25px;
@@ -593,6 +600,11 @@ section#section-3 .wrapper .background .block-text a {
   section#section-1 .wrapper {
     width: 100%;
     max-width: 100%;
+  }
+}
+@media (max-width: 400px) {
+  section#section-1 .wrapper .title {
+    font-size: 34px;
   }
 }
 @media (max-width: 600px) {
@@ -714,24 +726,24 @@ section#section-3 .wrapper .background .block-text a {
     font-size: 14px;
   }
 }
-@media (max-width: 400px) and (max-height: 950px) {
+@media (max-width: 450px) and (max-height: 950px) {
   section#section-3 .wrapper .background .block-text {
-    bottom: 12%;
+    bottom: 5px;
   }
   section#section-3 .wrapper .background .block-text p {
     font-size: 17px;
     line-height: 27px;
   }
 }
-@media (max-width: 400px) and (max-height: 870px) {
+@media (max-width: 450px) and (max-height: 870px) {
   section#section-3 .wrapper .background .block-text {
-    bottom: 12%;
+    bottom: 8%;
   }
   section#section-3 .wrapper .background .block-text p {
     line-height: 22px;
   }
 }
-@media (max-width: 400px) and (max-height: 800px) {
+@media (max-width: 450px) and (max-height: 800px) {
   section#section-3 .wrapper .background .block-text {
     bottom: 7%;
   }
@@ -739,7 +751,7 @@ section#section-3 .wrapper .background .block-text a {
     line-height: 22px;
   }
 }
-@media (max-width: 400px) and (max-height: 725px) {
+@media (max-width: 450px) and (max-height: 725px) {
   section#section-3 .wrapper .background .block-text {
     bottom: 2%;
   }
@@ -747,12 +759,13 @@ section#section-3 .wrapper .background .block-text a {
     line-height: 20px;
   }
 }
-@media (max-width: 400px) and (max-height: 690px) {
+@media (max-width: 450px) and (max-height: 690px) {
   section#section-3 .wrapper .background .block-text {
     bottom: 0%;
   }
   section#section-3 .wrapper .background .block-text p {
-    line-height: 19px;
+    font-size: 14px;
+    line-height: 18px;
   }
 }
 @media only screen and (max-width: 900px) and (orientation: landscape) {

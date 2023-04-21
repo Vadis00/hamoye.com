@@ -308,12 +308,15 @@ section {
         background-size: 100% 100%;
 
         .wrapper {
-            width: 55%;
-            max-width: 55%;
+            width: min-content;
             max-width: 750px;
             display: flex;
             flex-direction: column;
             justify-content: center;
+
+            .title {
+                white-space: nowrap;
+            }
 
             .description {
                 font-weight: 500;
@@ -690,6 +693,7 @@ section {
         &#section-1 {
             .wrapper {
                 width: 55%;
+                width: min-content;
 
                 .description {
                     text-align: initial;
@@ -709,6 +713,7 @@ section {
 
             .wrapper {
                 width: 60%;
+                width: min-content;
 
                 .title {
                     padding-bottom: 25px;
@@ -744,6 +749,18 @@ section {
             .wrapper {
                 width: 100%;
                 max-width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    section {
+        &#section-1 {
+            .wrapper {
+                .title {
+                    font-size: 34px;
+                }
             }
         }
     }
@@ -980,14 +997,14 @@ section {
     }
 }
 
-@media (max-width: 400px) and (max-height: 950px) {
+@media (max-width: 450px) and (max-height: 950px) {
     section {
         &#section-3 {
 
             .wrapper {
                 .background {
                     .block-text {
-                        bottom: 12%;
+                        bottom: 5px;
 
                         .block-text-title {}
 
@@ -1003,14 +1020,14 @@ section {
 }
 
 
-@media (max-width: 400px) and (max-height: 870px) {
+@media (max-width: 450px) and (max-height: 870px) {
     section {
         &#section-3 {
 
             .wrapper {
                 .background {
                     .block-text {
-                        bottom: 12%;
+                        bottom: 8%;
 
                         .block-text-title {}
 
@@ -1024,7 +1041,7 @@ section {
     }
 }
 
-@media (max-width: 400px) and (max-height: 800px) {
+@media (max-width: 450px) and (max-height: 800px) {
     section {
         &#section-3 {
 
@@ -1045,7 +1062,7 @@ section {
     }
 }
 
-@media (max-width: 400px) and (max-height: 725px) {
+@media (max-width: 450px) and (max-height: 725px) {
     section {
         &#section-3 {
 
@@ -1066,7 +1083,7 @@ section {
     }
 }
 
-@media (max-width: 400px) and (max-height: 690px) {
+@media (max-width: 450px) and (max-height: 690px) {
     section {
         &#section-3 {
 
@@ -1078,7 +1095,9 @@ section {
                         .block-text-title {}
 
                         p {
-                            line-height: 19px;
+                            font-size: 14px;
+                            line-height: 18px;
+
                         }
                     }
                 }
@@ -1138,17 +1157,11 @@ section {
                         max-width: 55%;
                         right: 0%;
 
-                        .block-text-title {
+                        .block-text-title {}
 
-                        }
+                        p {}
 
-                        p {
-
-                        }
-
-                        a {
-
-                        }
+                        a {}
                     }
                 }
             }
