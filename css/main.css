@@ -10,6 +10,10 @@
   font-family: "Avenir Next Bold";
   src: url("/font/AvenirNext-Bold.ttf") format("truetype");
 }
+html {
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -17,6 +21,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
 }
 
 a {
@@ -423,10 +428,12 @@ section#section-3 .wrapper .background .block-text a {
 }
 section#section-4 {
   position: relative;
+  height: auto;
 }
 section#section-4 .wrapper {
   padding-top: 70px;
   width: 100%;
+  overflow: hidden;
 }
 section#section-4 .wrapper .row {
   display: flex;
@@ -443,6 +450,7 @@ section#section-4 .wrapper .background {
   z-index: -1;
 }
 section#section-4 .wrapper .title {
+  font-family: "Avenir Next Bold";
   font-weight: 700;
   font-size: 36px;
   line-height: 49px;
@@ -544,6 +552,96 @@ section#section-4 .wrapper .action .arrow-left {
 }
 section#section-4 .wrapper .action .arrow-right {
   transform: rotate(-90deg);
+}
+section#section-4 .wrapper .how-it-works {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+section#section-4 .wrapper .how-it-works .title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 49px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  margin: auto;
+  padding: 0;
+  padding-top: 32px;
+}
+section#section-4 .wrapper .how-it-works .cards-wrapper {
+  display: flex;
+  padding-top: 60px;
+}
+section#section-4 .wrapper .how-it-works .cards-wrapper .card-2 {
+  min-width: calc(25% - 15px);
+  margin-left: 20px;
+  background: #F9F9F9;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+}
+section#section-4 .wrapper .how-it-works .cards-wrapper .card-2 .card-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 36px 16px;
+}
+section#section-4 .wrapper .how-it-works .cards-wrapper .card-2:first-child {
+  margin-left: 0px;
+}
+section#section-4 .wrapper .how-it-works .cards-wrapper .card-2 .card-title {
+  font-family: "Avenir Next Bold";
+  margin: 20px 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #02323D;
+}
+section#section-4 .wrapper .how-it-works .cards-wrapper .card-2 .card-description {
+  text-align: center;
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+}
+section#section-4 .wrapper .how-it-works .cards-wrapper .card-2 img {
+  width: 50px;
+}
+section#section-4 .wrapper .how-it-works .cards-wrapper .card-2 a {
+  color: #000000;
+  font-weight: bold;
+  margin-top: 5px;
+  display: block;
+}
+section#section-5 .wrapper {
+  width: 100%;
+  padding-top: 120px;
+}
+section#section-5 .wrapper .title {
+  font-family: "Avenir Next Bold";
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 49px;
+  color: #000000;
+  text-align: center;
+  margin: 0;
+}
+section#section-5 .wrapper .description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  color: #000000;
+  text-align: center;
+  opacity: 0.8;
+  margin: 0;
 }
 
 @media (max-width: 950px) {
@@ -948,4 +1046,179 @@ section#section-4 .wrapper .action .arrow-right {
     max-width: 55%;
     right: 0%;
   }
+}
+@media (max-width: 1100px) {
+  section#section-4 .wrapper .slider-wrapper .card {
+    min-width: calc(33% - 10px);
+  }
+  section#section-4 .wrapper .how-it-works .cards-wrapper {
+    flex-wrap: wrap;
+    padding-top: 20px;
+  }
+  section#section-4 .wrapper .how-it-works .cards-wrapper .card-2 {
+    min-width: calc(50% - 15px);
+    max-width: calc(50% - 15px);
+    margin-top: 20px;
+  }
+  section#section-4 .wrapper .how-it-works .cards-wrapper .card-2:nth-child(1), section#section-4 .wrapper .how-it-works .cards-wrapper .card-2:nth-child(3) {
+    margin-left: 0;
+  }
+}
+@media (max-width: 950px) {
+  section#section-4 .wrapper {
+    padding: 40px;
+  }
+  section#section-4 .wrapper .slider-wrapper .card {
+    min-width: calc(50% - 10px);
+  }
+}
+@media (max-width: 600px) {
+  section#section-4 .wrapper {
+    padding: 20px;
+  }
+  section#section-4 .wrapper .row .action {
+    display: none;
+  }
+  section#section-4 .wrapper .row .title {
+    font-size: 24px;
+  }
+  section#section-4 .wrapper .description {
+    font-size: 16px;
+  }
+  section#section-4 .wrapper .slider {
+    overflow: auto;
+  }
+  section#section-4 .wrapper .slider-wrapper {
+    overflow: auto;
+  }
+  section#section-4 .wrapper .slider-wrapper .card {
+    min-width: calc(80% - 0px);
+  }
+  section#section-4 .wrapper .how-it-works .cards-wrapper {
+    flex-wrap: nowrap;
+    overflow: auto;
+    padding-top: 20px;
+  }
+  section#section-4 .wrapper .how-it-works .cards-wrapper .card-2 {
+    min-width: 80%;
+    max-width: 80%;
+    margin-top: 20px;
+    margin-left: 0;
+    margin-right: 20px;
+  }
+}
+.slider {
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+
+.slider .slick-slide {
+  margin: 0 10px;
+}
+
+.slider .slick-slide img {
+  max-width: 100%;
+}
+
+.slider .slick-center img {
+  max-width: 150%;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.3s ease-out;
+}
+
+.carousel-item {
+  flex: 1 0 25%;
+  padding: 10px;
+  box-sizing: border-box;
+  padding: 7% 0;
+}
+.carousel-item .carousel-card {
+  background: #F9F9F9;
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.carousel-item .carousel-card .rating {
+  background-image: url("/images/icons/rating.svg");
+  background-size: contain;
+  height: 16px;
+  background-repeat: no-repeat;
+}
+.carousel-item .carousel-card .feedback p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  color: #17505C;
+  margin: 0;
+  padding-top: 10px;
+}
+.carousel-item .carousel-card .user-info {
+  display: flex;
+  align-items: center;
+  padding-top: 30px;
+}
+.carousel-item .carousel-card .user-info .left img {
+  width: 45px;
+  height: 45px;
+}
+.carousel-item .carousel-card .user-info .right {
+  padding-left: 10px;
+}
+.carousel-item .carousel-card .user-info .right p {
+  margin: 0;
+}
+.carousel-item .carousel-card .user-info .right .name {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  color: #02323D;
+}
+.carousel-item .carousel-card .user-info .right .location {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #6B7C80;
+}
+
+.carousel-item.large-item {
+  flex: 1 0 calc(50% - 60px);
+  height: 400px;
+  padding: 0;
+  background: #F9F9F9;
+  border: 1px solid #FFFFFF;
+  box-shadow: 0px 8px 44px rgba(75, 108, 139, 0.25);
+  border-radius: 16px;
+  margin: 40px 30px;
+}
+
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: calc(50% - 80px);
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.carousel-prev {
+  left: -10px;
+}
+
+.carousel-next {
+  right: -10px;
 }/*# sourceMappingURL=main.css.map */

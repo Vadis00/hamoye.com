@@ -15,7 +15,9 @@
     src: url("/font/AvenirNext-Bold.ttf") format('truetype');
 }
 
-
+html {
+    overflow-x: hidden;
+}
 
 body {
     margin: 0;
@@ -24,6 +26,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    overflow-x: hidden;
 }
 
 a {
@@ -491,10 +494,12 @@ section {
 
     &#section-4 {
         position: relative;
+        height: auto;
 
         .wrapper {
             padding-top: 70px;
             width: 100%;
+            overflow: hidden;
 
             .row {
                 display: flex;
@@ -513,6 +518,7 @@ section {
             }
 
             .title {
+                font-family: 'Avenir Next Bold';
                 font-weight: 700;
                 font-size: 36px;
                 line-height: 49px;
@@ -633,6 +639,111 @@ section {
                 .arrow-right {
                     transform: rotate(-90deg);
                 }
+            }
+
+            .how-it-works {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+
+                .title {
+                    font-weight: 700;
+                    font-size: 36px;
+                    line-height: 49px;
+                    display: flex;
+                    align-items: center;
+                    color: #000000;
+                    margin: auto;
+                    padding: 0;
+                    padding-top: 32px;
+                }
+
+                .cards-wrapper {
+                    display: flex;
+                    padding-top: 60px;
+
+                    .card-2 {
+                        min-width: calc(25% - 15px);
+                        margin-left: 20px;
+                        background: #F9F9F9;
+                        border-radius: 16px;
+                        display: flex;
+                        flex-direction: column;
+
+                        .card-wrapper {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            padding: 36px 16px;
+                        }
+
+                        &:first-child {
+                            margin-left: 0px;
+                        }
+
+                        .card-title {
+                            font-family: 'Avenir Next Bold';
+                            margin: 20px 0;
+                            font-weight: 700;
+                            font-size: 18px;
+                            line-height: 25px;
+                            display: flex;
+                            align-items: center;
+                            text-align: center;
+                            color: #02323D;
+                        }
+
+                        .card-description {
+                            text-align: center;
+                            margin: 0;
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 22px;
+                            display: flex;
+                            align-items: center;
+                            text-align: center;
+                            color: #000000;
+                        }
+
+                        img {
+                            width: 50px;
+                        }
+
+                        a {
+                            color: #000000;
+                            font-weight: bold;
+                            margin-top: 5px;
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &#section-5 {
+        .wrapper {
+            width: 100%;
+            padding-top: 120px;
+
+            .title {
+                font-family: "Avenir Next Bold";
+                font-weight: 700;
+                font-size: 36px;
+                line-height: 49px;
+                color: #000000;
+                text-align: center;
+                margin: 0;
+            }
+
+            .description {
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 25px;
+                color: #000000;
+                text-align: center;
+                opacity: 0.8;
+                margin: 0;
             }
         }
     }
@@ -1340,5 +1451,244 @@ section {
     }
 }
 
-
 // end for screen 3
+
+// media for screen 4
+
+@media (max-width: 1100px) {
+    section {
+        &#section-4 {
+
+            .wrapper {
+                .slider-wrapper {
+                    .card {
+                        min-width: calc(33% - 10px);
+                    }
+                }
+
+                .how-it-works {
+                    .cards-wrapper {
+                        flex-wrap: wrap;
+                        padding-top: 20px;
+
+                        .card-2 {
+                            min-width: calc(50% - 15px);
+                            max-width: calc(50% - 15px);
+                            margin-top: 20px;
+
+                            &:nth-child(1),
+                            &:nth-child(3) {
+                                margin-left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 950px) {
+    section {
+        &#section-4 {
+
+            .wrapper {
+                padding: 40px;
+
+                .slider-wrapper {
+
+                    .card {
+                        min-width: calc(50% - 10px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    section {
+        &#section-4 {
+
+            .wrapper {
+                padding: 20px;
+
+                .row {
+                    .action {
+                        display: none;
+                    }
+
+                    .title {
+                        font-size: 24px;
+                    }
+                }
+
+                .description {
+                    font-size: 16px;
+                }
+
+                .slider {
+                    overflow: auto;
+                }
+
+                .slider-wrapper {
+                    overflow: auto;
+
+                    .card {
+                        min-width: calc(80% - 0px);
+                    }
+                }
+
+                .how-it-works {
+                    .cards-wrapper {
+                        flex-wrap: nowrap;
+                        overflow: auto;
+                        padding-top: 20px;
+
+                        .card-2 {
+                            min-width: calc(80%);
+                            max-width: calc(80%);
+                            margin-top: 20px;
+                            margin-left: 0;
+                            margin-right: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//end for screen 4
+
+
+.slider {
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+
+.slider .slick-slide {
+    margin: 0 10px;
+}
+
+.slider .slick-slide img {
+    max-width: 100%;
+}
+
+.slider .slick-center img {
+    max-width: 150%;
+}
+
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.3s ease-out;
+}
+
+.carousel-item {
+    flex: 1 0 25%;
+    padding: 10px;
+    box-sizing: border-box;
+    padding: 7% 0;
+ 
+    .carousel-card {
+        background: #F9F9F9;
+        border: 1px solid #FFFFFF;
+        border-radius: 8px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+
+        .rating {
+            background-image: url('/images/icons/rating.svg');
+            background-size: contain;
+            height: 16px;
+            background-repeat: no-repeat;
+        }
+
+        .feedback {
+            p {
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 140%;
+                color: #17505C;
+                margin: 0;
+                padding-top: 10px;
+            }
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            padding-top: 30px;
+
+            .left {
+                img {
+                    width: 45px;
+                    height: 45px;
+                }
+            }
+
+            .right {
+                padding-left: 10px;
+
+                p {
+                    margin: 0;
+                }
+
+                .name {
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 22px;
+                    color: #02323D;
+                }
+
+                .location {
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 19px;
+                    color: #6B7C80;
+                }
+            }
+        }
+    }
+}
+
+.carousel-item.large-item {
+    flex: 1 0 calc(50% - 60px);
+    height: 400px;
+    padding: 0;
+    background: #F9F9F9;
+    border: 1px solid #FFFFFF;
+    box-shadow: 0px 8px 44px rgba(75, 108, 139, 0.25);
+    border-radius: 16px;
+    margin: 40px 30px; 
+}
+
+.carousel-prev,
+.carousel-next {
+    position: absolute;
+    top: calc(50% - 80px);
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.carousel-prev {
+    left: -10px;
+}
+
+.carousel-next {
+    right: -10px;
+}
